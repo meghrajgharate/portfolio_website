@@ -1,0 +1,67 @@
+
+/* styles.css — simple responsive portfolio */
+:root{
+  --primary:#0b69ff;
+  --accent:#ff6b6b;
+  --bg:#f6f8fb;
+  --card:#ffffff;
+  --text:#1f2937;
+  --muted:#6b7280;
+  --radius:12px;
+  --gap:1.25rem;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter, Roboto, system-ui, -apple-system, "Segoe UI", "Helvetica Neue", Arial;color:var(--text);background:var(--bg);-webkit-font-smoothing:antialiased}
+.container{max-width:1000px;margin:0 auto;padding:2rem}
+.site-header{position:fixed;top:0;left:0;right:0;background:linear-gradient(90deg,var(--primary),#4f7fff);color:white;backdrop-filter:blur(6px);z-index:50}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.75rem 1rem;max-width:1100px;margin:0 auto}
+.logo{font-size:1rem;letter-spacing:1px;margin:0}
+.nav{display:flex;gap:1rem}
+.nav a{color:white;text-decoration:none;padding:.35rem .6rem;border-radius:8px;font-weight:600}
+.nav a:hover{background:rgba(255,255,255,0.12)}
+.nav.open{display:flex;flex-direction:column;background:transparent;padding:1rem;border-radius:8px}
+
+.nav-toggle{display:none;background:transparent;border:0;color:white;font-size:1.25rem}
+
+.hero{display:flex;gap:2rem;align-items:center;padding:7rem 1rem 4rem}
+.hero-left{flex:1}
+.hero-right{flex:0 0 220px;text-align:center}
+.profile-img{width:200px;height:200px;border-radius:50%;object-fit:cover;border:6px solid white;box-shadow:0 8px 30px rgba(11,105,255,0.15)}
+.sub{color:var(--muted);line-height:1.5}
+.meta{margin:1rem 0;color:var(--muted)}
+.btn{display:inline-block;background:var(--accent);color:white;padding:.45rem .9rem;border-radius:10px;text-decoration:none;font-weight:700}
+.btn.ghost{background:transparent;border:2px solid rgba(0,0,0,0.06);color:var(--text);font-weight:600}
+.btn:hover{transform:translateY(-3px);transition:all .18s ease}
+
+.card{background:var(--card);border-radius:var(--radius);padding:1.25rem;margin-bottom:1.25rem;box-shadow:0 6px 18px rgba(16,24,40,0.04)}
+.skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1rem}
+.skill-card{background:linear-gradient(180deg,#ffffff,#fbfdff);padding:1rem;border-radius:10px;min-height:120px}
+.skill-card h4{margin-top:0;margin-bottom:.5rem}
+.skills-grid ul{padding-left:1rem;margin:0;color:var(--muted)}
+
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.contact-form input, .contact-form textarea{width:100%;padding:.6rem;border-radius:8px;border:1px solid #e6e9ef;margin-bottom:.6rem}
+.contact-form label{display:block;margin-bottom:.25rem;font-weight:600;color:var(--muted)}
+.contact-form .btn{width:100%}
+
+.site-footer{padding:1.5rem 0;margin-top:2rem;text-align:center;color:var(--muted)}
+
+.small{font-size:.9rem;color:var(--muted);margin-top:.75rem}
+
+/* Responsive */
+@media (max-width:900px){
+  .skills-grid{grid-template-columns:repeat(2,1fr)}
+  .hero{flex-direction:column;align-items:flex-start;padding-top:6rem}
+  .hero-right{align-self:center}
+}
+@media (max-width:600px){
+  .nav{display:none}
+  .nav-toggle{display:block}
+  .skills-grid{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .hero-right{flex:0 0 160px}
+  .profile-img{width:160px;height:160px}
+  .header-inner{padding:.6rem 1rem}
+  .container{padding:1rem}
+}
