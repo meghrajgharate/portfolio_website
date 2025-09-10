@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Meghraj Gharate — Portfolio</title>
+ <link rel="stylesheet" href="css/styles.css" />
+
+
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="logo">MEGHRAJ GHARATE</h1>
+      <nav class="nav">
+        <a href="#home">Home</a>
+        <a href="#about">About Me</a>
+        <a href="#skills">Skills</a>
+        <a href="#hobbies">Hobbies</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero container">
+      <div class="hero-left">
+        <h2>Hello — I'm Meghraj</h2>
+        <p class="sub">BE Information Technology student at Laxmi Institute of Technology. Exploring Data Analytics & Machine Learning. I’m excited to learn and ready to take on new challenges that help me grow professionally and personally.</p>
+        <p class="meta">
+          <strong>Email:</strong> <a href="mailto:mohitgharate0@gmail.com">mohitgharate0@gmail.com</a> •
+          <strong>Phone:</strong> <a href="tel:+917767908560">+91 77679 08560</a>
+        </p>
+        <p class="cta"><a class="btn" href="#contact">Get in touch</a> <a class="btn ghost" href="#skills">View skills</a></p>
+        <p class="small">Location: B/107 Aaradhana Bhavan Chanod Colony, Vapi, Gujarat</p>
+        <p class="small"><a href="https://www.linkedin.com/in/meghraj-gharate-a5212b316?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener">LinkedIn profile</a></p>
+      </div>
+      <div class="hero-right">
+        <img src="images/picture.jpg" alt="Meghraj Gharate — profile" class="profile-img" />
+      </div>
+    </section>
+
+    <section id="about" class="container card">
+      <h3>About Me</h3>
+      <p>I’m still exploring different areas in IT, but I’m excited to learn and ready to take on new challenges that help me grow professionally and personally.</p>
+      <h4>Objective</h4>
+      <p>To learn and grow in the fields of Data Analytics and Machine Learning while contributing to real-world projects and developing practical skills.</p>
+      <h4>Experience / Training</h4>
+      <ul>
+        <li><strong>Data Analytics and Machine Learning</strong> — NIELT (12/09/2022 - 23/09/2022). Worked with Python, SQL and Tableau on real datasets.</li>
+      </ul>
+    </section>
+
+    <section id="skills" class="container">
+      <h3>Skills</h3>
+      <div class="skills-grid">
+        <div class="skill-card"><h4>Technical</h4><ul><li>HTML</li><li>C</li><li>DBMS</li><li>Python (data work)</li><li>SQL</li></ul></div>
+        <div class="skill-card"><h4>Tools & Concepts</h4><ul><li>Tableau</li><li>Data Analytics</li><li>Machine Learning (basic)</li></ul></div>
+        <div class="skill-card"><h4>Soft Skills</h4><ul><li>Problem-Solving</li><li>Teamwork</li><li>Adaptability</li></ul></div>
+      </div>
+    </section>
+
+    <section id="hobbies" class="container card">
+      <h3>Hobbies & Achievements</h3>
+      <ul>
+        <li>Learning new technologies</li>
+        <li>Building small projects</li>
+        <li>Participating in workshops and trainings</li>
+      </ul>
+      <h4>Education</h4>
+      <ul>
+        <li><strong>BE — Information Technology</strong>, Laxmi Institute of Technology (2024 - 2027)</li>
+        <li><strong>Diploma — Computer Engineering</strong>, Government Polytechnic, Daman — CGPA 6.65</li>
+        <li><strong>SSC</strong>, Shri Mahatma J.F.P.T.S — 85.93%</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="container card">
+      <h3>Contact</h3>
+      <p>Reach out by email or phone — I’m open to internships, projects and learning opportunities.</p>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <p><strong>Email:</strong> <a href="mailto:mohitgharate0@gmail.com">mohitgharate0@gmail.com</a></p>
+          <p><strong>Phone:</strong> <a href="tel:+917767908560">+91 77679 08560</a></p>
+          <p><strong>Address:</strong> B/107 Aaradhana Bhavan Chanod Colony, Vapi, Gujarat</p>
+        </div>
+        <form class="contact-form" action="#" method="post" onsubmit="alert('This is a demo form — implement backend before production'); return false;">
+          <label for="name">Name</label>
+          <input id="name" name="name" required />
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required />
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+          <button class="btn" type="submit">Submit</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© Meghraj Gharate — <span id="year"></span>. Built for Laxmi Institute of Technology assignment.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // Simple nav toggle for small screens
+    const btn = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.nav');
+    btn.addEventListener('click', ()=> nav.classList.toggle('open'));
+  </script>
+</body>
+</html>
